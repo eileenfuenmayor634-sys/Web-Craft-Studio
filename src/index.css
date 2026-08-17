@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --col-black: #111111;
+  --col-dark: #333333;
+  --col-mid: #666666;
+  --col-muted: #999999;
+  --col-border: #E0E0E0;
+  --col-surface: #F5F5F5;
+  --col-white: #FFFFFF;
+  --font-display: 'Barlow Condensed', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--col-dark);
+  background: var(--col-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbars by default */
+html { scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+
+/* Evita el rebote del scroll en los extremos para mantener el Navbar estático */
+html, body {
+  overscroll-behavior-y: none;
+  margin: 0;
+  padding: 0;
+}

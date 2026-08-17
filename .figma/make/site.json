@@ -1,0 +1,10 @@
+{
+  "description": "Showcases professional web development and digital marketing services with clear project highlights, client testimonials, and an easy contact form for conversions.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
