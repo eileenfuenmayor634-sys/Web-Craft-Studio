@@ -1,7 +1,7 @@
 import { useState, useCallback, Dispatch, SetStateAction } from 'react';
 import { C, px } from '../constants/theme';
 import { NAV_ITEMS } from '../constants/data';
-import logoSrc from '../assets/public/Web craft Studio.png';
+import logoSrc from '../public/Web craft Studio.png';
 
 interface NavbarProps {
   activeDropdown?: string | null;
