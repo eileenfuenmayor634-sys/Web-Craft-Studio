@@ -1,10 +1,9 @@
 import { useState, useCallback, Dispatch, SetStateAction } from 'react';
 import { C, px } from '../constants/theme';
 import { NAV_ITEMS } from '../constants/data';
-
 import logoSrc from '../public/Web craft Studio.png';
-=======
->>>>>>> 2bc62460108ae4a73883d5d8900b9ad0e4bc563c
+
+
 
 interface NavbarProps {
   activeDropdown?: string | null;
@@ -37,7 +36,7 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
         {/* Logo */}
         <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
           {/* El logo fue movido a /public. Usamos la URL pública en lugar de importarlo. */}
-          <img src="/Web craft Studio.png" alt="Web craft Studio" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+          <img src={logoSrc} alt="Web craft Studio" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
         </a>
 
         {/* Desktop nav */}

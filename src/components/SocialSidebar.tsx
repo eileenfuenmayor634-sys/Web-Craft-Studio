@@ -1,5 +1,5 @@
 import { C } from '../constants/theme';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, } from 'react-icons/fa';
 export default function SocialSidebar() {
   return (
     <div style={{

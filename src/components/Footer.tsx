@@ -1,6 +1,6 @@
 import { C, px } from '../constants/theme';
 import { SERVICES, BLOG_POSTS } from '../constants/data';
-import logoSrc from '../assets/imports/Web craft Studio.png';
+import logoSrc from '../public/Web craft Studio.png';
 
 export default function Footer() {
   return (
