@@ -18,7 +18,7 @@ import SecondaryCta from './components/SecondaryCta';
 import ClientLogos from './components/ClientLogos';
 import ClientifyPartner from './components/ClientifyPartner';
 import Blog from './components/Blog';
-import Contact from './components/Contact';
+
 import Footer from './components/Footer';
 
 export default function App() {
@@ -47,7 +47,7 @@ export default function App() {
       <ClientLogos />
       <ClientifyPartner />
       <Blog />
-      <Contact />
+     
       <Footer />
 
       {/* Responsive CSS global inyectado */}
