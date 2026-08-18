@@ -33,7 +33,8 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
         {/* Logo */}
         <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
           {/* Logo served from public folder. Use encodeURI to handle spaces if any. */}
-          <img src={encodeURI('/Web craft Studio.png')} alt="Web craft Studio" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+          <img src="/web-craft-studio.png" alt="Web Craft Studio" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+
         </a>
 
         {/* Desktop nav */}
