@@ -41,13 +41,13 @@ export default function Hero() {
               letterSpacing: '-0.01em',
               textTransform: 'uppercase', color: C.white, margin: 0,
             }}>
-              Transforming<br />
-              <span style={{ color: C.cyan }}>Organizations.</span><br />
-              Building<br />
-              <span style={{ color: C.cyan, opacity: 0.5 }}>Futures.</span>
+              Hacemos de tu<br />
+              <span style={{ color: C.cyan }}>emprendimiento</span><br />
+              un negocio<br />
+              <span style={{ color: C.cyan, opacity: 0.5 }}>real.</span>
             </h1>
             <p style={{ color: '#777', fontSize: '16px', lineHeight: 1.7, maxWidth: '48ch', margin: 0 }}>
-              We partner with ambitious companies to design, build, and grow their digital presence from brand strategy to full-stack development and performance marketing.
+             Ayudamos a emprendedores a diseñar, construir y expandir su presencia digital, desde estrategia de marca hasta su desarrollo integral.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', paddingTop: '8px' }}>
               <a href="#contact" style={{
