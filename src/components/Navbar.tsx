@@ -17,6 +17,10 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
   const [mobileOpen, setMobileOpen] = useState(false);
   const closeDropdown = useCallback(() => updateDropdown(null), [updateDropdown]);
 
+  const whatsAppNumber = "584246370388";
+  const whatsAppMessage = "Hola, quiero comenzar mi proyecto con Web Craft Studio."; // personaliza
+  const whatsAppHref = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(whatsAppMessage)}`;
+
   return (
     <nav 
       onClick={e => { e.stopPropagation(); closeDropdown(); }}
@@ -102,18 +106,22 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
 
         {/* CTA + mobile btn */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <a href="#contact" style={{
-            display: 'none',
-            padding: '8px 20px', background: C.cyan, color: C.black,
-            fontSize: '13px', fontWeight: 700, textDecoration: 'none',
-            letterSpacing: '0.05em', transition: 'opacity 0.15s',
-          }}
-          className="cta-desktop"
-          onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '0.85')}
-          onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '1')}
-          >
-            Get Started
-          </a>
+          <a
+      href={whatsAppHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: 'none',
+        padding: '8px 20px', background: C.cyan, color: C.black,
+        fontSize: '13px', fontWeight: 700, textDecoration: 'none',
+        letterSpacing: '0.05em', transition: 'opacity 0.15s',
+      }}
+      className="cta-desktop"
+      onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '0.85')}
+      onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '1')}
+      >
+      Get Started
+      </a>
 
           <button
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '6px' }}
@@ -153,11 +161,15 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
             </a>
           ))}
           <div style={{ ...px, paddingTop: '16px', paddingBottom: '16px' }}>
-            <a href="#contact" style={{
-              display: 'block', textAlign: 'center', padding: '12px', background: C.cyan,
-              color: C.black, fontSize: '14px', fontWeight: 700, textDecoration: 'none',
-            }}
-            onClick={() => setMobileOpen(false)}
+            <a
+              href={whatsAppHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'block', textAlign: 'center', padding: '12px', background: C.cyan,
+                color: C.black, fontSize: '14px', fontWeight: 700, textDecoration: 'none',
+              }}
+              onClick={() => setMobileOpen(false)}
             >
               Get Started
             </a>
