@@ -59,7 +59,7 @@ export default function Hero() {
               onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '0.85')}
               onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '1')}
               >
-                Begin Your Journey <Arrow size={14} color={C.black} />
+                Comienza tu viaje <Arrow size={14} color={C.black} />
               </a>
               <a href="#portfolio" style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
