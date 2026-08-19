@@ -2,6 +2,13 @@ import { C, px, sectionPy } from '../constants/theme';
 import { Arrow } from '../ui/Arrow';
 
 export default function Hero() {
+ const schedulingBase =
+  (typeof process !== 'undefined' && process.env && process.env.NEXT_PUBLIC_SCHEDULING_URL)
+    ? process.env.NEXT_PUBLIC_SCHEDULING_URL
+    : "https://calendly.com/webcraftstudiomcboz/new-meeting";
+
+const schedulingHref = `${schedulingBase}?utm_source=site&utm_medium=cta&utm_campaign=hero_schedule`;
+
   return (
     <section style={{
       background: C.black, position: 'relative', overflow: 'hidden',
@@ -50,17 +57,30 @@ export default function Hero() {
              Ayudamos a emprendedores a diseñar, construir y expandir su presencia digital, desde estrategia de marca hasta su desarrollo integral.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', paddingTop: '8px' }}>
-              <a href="#contact" style={{
-                display: 'inline-flex', alignItems: 'center', gap: '8px',
-                padding: '14px 28px', background: C.cyan, color: C.black,
-                fontSize: '13px', fontWeight: 700, letterSpacing: '0.08em',
-                textTransform: 'uppercase', textDecoration: 'none', transition: 'opacity 0.15s',
-              }}
-              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '0.85')}
-              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '1')}
-              >
-                Agenda tu cita<Arrow size={14} color={C.black} />
-              </a>
+              <a
+         href={schedulingHref}
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Agendar reunión"
+         style={{
+           display: 'inline-flex',
+           alignItems: 'center',
+           gap: '8px',
+           padding: '14px 28px',
+           background: C.cyan,
+           color: C.black,
+           fontSize: '13px',
+           fontWeight: 700,
+           letterSpacing: '0.08em',
+           textTransform: 'uppercase',
+           textDecoration: 'none',
+           transition: 'opacity 0.15s',
+         }}
+         onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '0.85')}
+         onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '1')}
+          >
+            Agenda tu cita <Arrow size={14} color={C.black} />
+          </a>
               <a href="#portfolio" style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
                 padding: '14px 28px', border: `1px solid ${C.navyBorder}`, color: '#7A9AB8',
