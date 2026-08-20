@@ -2,12 +2,14 @@ import { C, px, sectionPy } from '../constants/theme';
 import { Arrow } from '../ui/Arrow';
 
 export default function Hero() {
- const schedulingBase =
-  (typeof process !== 'undefined' && process.env && process.env.NEXT_PUBLIC_SCHEDULING_URL)
-    ? process.env.NEXT_PUBLIC_SCHEDULING_URL
-    : "https://calendly.com/webcraftstudiomcboz/new-meeting";
+    const schedulingBase =
+     (typeof process !== 'undefined' && process.env && process.env.NEXT_PUBLIC_SCHEDULING_URL)
+       ? process.env.NEXT_PUBLIC_SCHEDULING_URL
+       : "https://calendly.com/webcraftstudiomcboz/new-meeting";
 
-const schedulingHref = `${schedulingBase}?utm_source=site&utm_medium=cta&utm_campaign=hero_schedule`;
+     const utm = "utm_source=site&utm_medium=cta&utm_campaign=hero_schedule";
+     const separator = schedulingBase.includes('?') ? '&' : '?';
+     const schedulingHref = `${schedulingBase}${separator}${utm}`;
 
   return (
     <section style={{
