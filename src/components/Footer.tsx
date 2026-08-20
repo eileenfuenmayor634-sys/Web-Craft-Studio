@@ -1,6 +1,6 @@
 import { C, px } from '../constants/theme';
 import { SERVICES, BLOG_POSTS } from '../constants/data';
-import logoSrc from '../public/web-craft-studio.png';
+
 
 export default function Footer() {
   return (
@@ -13,7 +13,11 @@ export default function Footer() {
       }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <div>
-            <img src={logoSrc} alt="web-craft-studio.png" style={{ height: '44px', width: 'auto', objectFit: 'contain' }} />
+            <img 
+        src="/web-craft-studio.png" 
+        alt="Web Craft Studio" 
+        style={{ height: '40px', width: 'auto', objectFit: 'contain' }} 
+        />
           </div>
           <p style={{ color: '#555', fontSize: '13px', lineHeight: 1.7, margin: 0 }}>
             Maracaibo, Venezuela<br />
