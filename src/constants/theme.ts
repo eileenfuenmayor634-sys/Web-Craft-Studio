@@ -17,6 +17,10 @@ export const C = {
   // Brand accent
   cyan: '#00C8E8',
   cyanDark: '#00A8C4',
+  whatsapp: '#25D366',       // color oficial WhatsApp
+  whatsappDark: '#1ebe57',   // variante para hover/activo
+
+
   cyanGlow: 'rgba(0,200,232,0.15)',
 } as const;
 

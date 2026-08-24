@@ -1,6 +1,7 @@
 import { useState, useCallback, Dispatch, SetStateAction } from 'react';
 import { C, px } from '../constants/theme';
 import { NAV_ITEMS } from '../constants/data';
+import { FaWhatsapp } from 'react-icons/fa';
 
 
 interface NavbarProps {
@@ -108,22 +109,39 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
         {/* CTA + mobile btn */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <a
-      href={whatsAppHref}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        display: 'none',
-        padding: '8px 20px', background: C.cyan, color: C.black,
-        fontSize: '13px', fontWeight: 700, textDecoration: 'none',
-        letterSpacing: '0.05em', transition: 'opacity 0.15s',
-      }}
-      className="cta-desktop"
-      onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '0.85')}
-      onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '1')}
-      >
-      Get Started
-      </a>
-
+  href={whatsAppHref}
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '8px',
+    padding: '8px 18px',
+    background: C.whatsapp,
+    color: C.white,
+    fontSize: '13px',
+    fontWeight: 700,
+    textDecoration: 'none',
+    letterSpacing: '0.05em',
+    transition: 'opacity 0.15s, background 0.12s',
+    borderRadius: '8px',
+  }}
+  className="cta-desktop"
+  aria-label="Get started on WhatsApp"
+  onMouseEnter={e => {
+    const el = e.currentTarget as HTMLAnchorElement;
+    el.style.opacity = '0.95';
+    el.style.background = C.whatsappDark;
+  }}
+  onMouseLeave={e => {
+    const el = e.currentTarget as HTMLAnchorElement;
+    el.style.opacity = '1';
+    el.style.background = C.whatsapp;
+  }}
+>
+  <FaWhatsapp aria-hidden="true" style={{ width: 18, height: 18 }} />
+  Get Started
+</a>
           <button
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '6px' }}
             onClick={() => setMobileOpen(o => !o)}
@@ -162,18 +180,29 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
             </a>
           ))}
           <div style={{ ...px, paddingTop: '16px', paddingBottom: '16px' }}>
-            <a
-              href={whatsAppHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'block', textAlign: 'center', padding: '12px', background: C.cyan,
-                color: C.black, fontSize: '14px', fontWeight: 700, textDecoration: 'none',
-              }}
-              onClick={() => setMobileOpen(false)}
-            >
-              Get Started
-            </a>
+          <a
+  href={whatsAppHref}
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: 'block',
+    textAlign: 'center',
+    padding: '12px',
+    background: C.whatsapp,
+    color: C.white,
+    fontSize: '14px',
+    fontWeight: 700,
+    textDecoration: 'none',
+    borderRadius: '8px',
+  }}
+  onClick={() => setMobileOpen(false)}
+  aria-label="Get started on WhatsApp"
+  onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = C.whatsappDark)}
+  onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = C.whatsapp)}
+>
+  <FaWhatsapp aria-hidden="true" style={{ verticalAlign: 'middle', marginRight: 8, width: 18, height: 18 }} />
+  Get Started
+</a>
           </div>
         </div>
       )}
