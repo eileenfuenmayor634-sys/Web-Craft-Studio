@@ -38,3 +38,62 @@ html, body {
   outline: 3px solid rgba(37,211,102,0.18);
   outline-offset: 2px;
 }
+
+
+/* WhatsApp CTA styles - pegar al final de src/index.css */
+
+/* Forzar no-wrap y apariencia en desktop; usamos !important para sobreescribir estilos inline si existen */
+.cta-desktop {
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: #25D366 !important; /* C.whatsapp */
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  transition: opacity .15s, background .12s;
+}
+
+/* Ocultar la pastilla del header en pantallas pequeñas (mostramos CTA dentro del menú) */
+@media (max-width: 768px) {
+  .cta-desktop {
+    display: none !important;
+  }
+}
+
+/* CTA dentro del menú móvil: full width, ícono alineado, texto en una sola línea */
+.mobile-whatsapp-cta {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #25D366; /* C.whatsapp */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+/* Icon sizing dentro del CTA móvil */
+.mobile-whatsapp-cta svg,
+.mobile-whatsapp-cta .whatsapp-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* foco accesible */
+.cta-desktop:focus, .mobile-whatsapp-cta:focus {
+  outline: 3px solid rgba(37,211,102,0.18);
+  outline-offset: 2px;
+}

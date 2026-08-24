@@ -1,5 +1,6 @@
 import { C, px, sectionPy } from '../constants/theme';
 import { Arrow } from '../ui/Arrow';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Hero() {
     const schedulingBase =
@@ -10,6 +11,11 @@ export default function Hero() {
      const utm = "utm_source=site&utm_medium=cta&utm_campaign=hero_schedule";
      const separator = schedulingBase.includes('?') ? '&' : '?';
      const schedulingHref = `${schedulingBase}${separator}${utm}`;
+
+     // WhatsApp CTA (mismo número / mensaje que en el navbar)
+     const whatsAppNumber = "584246370388";
+     const whatsAppMessage = "Hola, quiero comenzar mi proyecto con Web Craft Studio.";
+     const whatsAppHref = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(whatsAppMessage)}`;
 
   return (
     <section style={{
@@ -58,41 +64,60 @@ export default function Hero() {
             <p style={{ color: '#777', fontSize: '16px', lineHeight: 1.7, maxWidth: '48ch', margin: 0 }}>
              Ayudamos a emprendedores a diseñar, construir y expandir su presencia digital, desde estrategia de marca hasta su desarrollo integral.
             </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', paddingTop: '8px' }}>
+
+            {/* CTA row: botón principal + WhatsApp */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', paddingTop: '8px' }} className="hero-ctas">
               <a
-         href={schedulingHref}
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Agendar reunión"
-         style={{
-           display: 'inline-flex',
-           alignItems: 'center',
-           gap: '8px',
-           padding: '14px 28px',
-           background: C.cyan,
-           color: C.black,
-           fontSize: '13px',
-           fontWeight: 700,
-           letterSpacing: '0.08em',
-           textTransform: 'uppercase',
-           textDecoration: 'none',
-           transition: 'opacity 0.15s',
-         }}
-         onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '0.85')}
-         onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '1')}
-          >
-            Agenda tu cita <Arrow size={14} color={C.black} />
-          </a>
-              <a href="#portfolio" style={{
-                display: 'inline-flex', alignItems: 'center', gap: '8px',
-                padding: '14px 28px', border: `1px solid ${C.navyBorder}`, color: '#7A9AB8',
-                fontSize: '13px', fontWeight: 600, letterSpacing: '0.08em',
-                textTransform: 'uppercase', textDecoration: 'none', transition: 'all 0.15s',
-              }}
-              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = C.cyan; (e.currentTarget as HTMLAnchorElement).style.color = C.cyan; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = C.navyBorder; (e.currentTarget as HTMLAnchorElement).style.color = '#7A9AB8'; }}
+                href={schedulingHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Agendar reunión"
+                className="hero-cta-primary"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '14px 28px',
+                  background: C.cyan,
+                  color: C.black,
+                  fontSize: '13px',
+                  fontWeight: 700,
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  transition: 'opacity 0.15s',
+                  borderRadius: 8,
+                }}
+                onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '0.85')}
+                onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.opacity = '1')}
               >
-                See Our Work
+                Agenda tu cita <Arrow size={14} color={C.black} />
+              </a>
+
+              <a
+                href={whatsAppHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-whatsapp-cta"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '10px 14px',
+                  background: C.whatsapp,
+                  color: C.white,
+                  fontSize: '13px',
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  borderRadius: 8,
+                  transition: 'background 0.12s, opacity 0.12s',
+                }}
+                aria-label="Contactar por WhatsApp"
+                onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = C.whatsappDark)}
+                onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = C.whatsapp)}
+              >
+                <FaWhatsapp aria-hidden="true" style={{ width: 16, height: 16, flexShrink: 0 }} />
+                <span style={{ whiteSpace: 'nowrap' }}>Chatear</span>
               </a>
             </div>
           </div>
