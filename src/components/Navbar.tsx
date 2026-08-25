@@ -201,54 +201,34 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu (fullscreen, controlled by CSS classes) */}
       {mobileOpen && (
-        <div style={{ borderTop: `1px solid ${C.navyBorder}`, background: C.navyMid }}>
-          {NAV_ITEMS.map(item => (
-            <a
-              key={item.label}
-              href={item.href}
-              style={{
-                display: 'block',
-                padding: '14px 0',
-                fontSize: '15px',
-                fontWeight: 500,
-                color: '#8AAAC4',
-                textDecoration: 'none',
-                borderBottom: `1px solid ${C.navyBorder}`,
-                ...px,
-              }}
-              onClick={() => setMobileOpen(false)}
-            >
-              {item.label}
-            </a>
-          ))}
+        <div className="mobile-menu" style={{ borderTop: `1px solid ${C.navyBorder}` }}>
+          <div className="mobile-menu-inner" style={{ background: C.navyMid }}>
+            {NAV_ITEMS.map(item => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="mobile-menu-item"
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </a>
+            ))}
 
-          <div style={{ ...px, paddingTop: '16px', paddingBottom: '16px' }}>
-            <a
-              href={whatsAppHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mobile-whatsapp-cta"
-              onClick={() => setMobileOpen(false)}
-              aria-label="Get started on WhatsApp"
-              style={{
-                display: 'block',
-                textAlign: 'center',
-                padding: '12px',
-                background: C.whatsapp,
-                color: C.white,
-                fontSize: '14px',
-                fontWeight: 700,
-                textDecoration: 'none',
-                borderRadius: '8px',
-              }}
-              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = C.whatsappDark)}
-              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = C.whatsapp)}
-            >
-              <FaWhatsapp aria-hidden="true" className="whatsapp-icon" />
-              <span className="cta-text">Get Started</span>
-            </a>
+            <div className="mobile-menu-cta-wrap">
+              <a
+                href={whatsAppHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mobile-whatsapp-cta"
+                onClick={() => setMobileOpen(false)}
+                aria-label="Get started on WhatsApp"
+              >
+                <FaWhatsapp aria-hidden="true" className="whatsapp-icon" />
+                <span className="cta-text">Get Started</span>
+              </a>
+            </div>
           </div>
         </div>
       )}
