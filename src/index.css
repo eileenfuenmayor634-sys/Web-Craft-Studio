@@ -97,3 +97,92 @@ html, body {
   outline: 3px solid rgba(37,211,102,0.18);
   outline-offset: 2px;
 }
+
+
+/* --- Mobile menu: full screen + readable items --- */
+.mobile-menu {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 1100 !important;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+/* inner: background + scroll */
+.mobile-menu-inner {
+  flex: 1;
+  background: #132032;                 /* fallback; inline style uses C.navyMid */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-left: clamp(1.25rem, 5vw, 6rem);
+  padding-right: clamp(1.25rem, 5vw, 6rem);
+}
+
+/* Header inside menu (logo + close) */
+.mobile-menu .mobile-menu-inner > div:first-child {
+  border-bottom: 1px solid #1D3048;
+}
+
+/* Items: block, line-height y separación */
+.mobile-menu-item {
+  display: block !important;
+  padding: 18px 0 !important;
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+  font-weight: 600 !important;
+  color: #8AAAC4 !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #1D3048 !important;
+  white-space: normal !important;
+  word-break: normal !important;
+}
+
+/* hover / focus accesible */
+.mobile-menu-item:focus,
+.mobile-menu-item:hover {
+  color: #00C8E8 !important;
+  background: rgba(255,255,255,0.01) !important;
+  outline: none;
+}
+
+/* CTA wrapper */
+.mobile-menu-cta-wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 36px;
+}
+
+/* WhatsApp CTA dentro del menú */
+.mobile-whatsapp-cta {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px !important;
+  background: #25D366 !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  border-radius: 10px !important;
+  min-width: calc(100% - 2rem) !important;
+  max-width: 560px !important;
+  justify-content: center !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Icono */
+.mobile-whatsapp-cta .whatsapp-icon,
+.mobile-whatsapp-cta svg {
+  width: 20px !important;
+  height: 20px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 360px) {
+  .mobile-menu-item { font-size: 16px !important; padding: 14px 0 !important; }
+  .mobile-whatsapp-cta { font-size: 15px !important; padding: 12px 18px !important; }
+  .mobile-whatsapp-cta .whatsapp-icon { width: 18px !important; height: 18px !important; }
+}

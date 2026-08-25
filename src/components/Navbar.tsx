@@ -1,4 +1,4 @@
-import { useState, useCallback, Dispatch, SetStateAction } from 'react';
+import { useState, useCallback, Dispatch, SetStateAction, useEffect } from 'react';
 import { C, px } from '../constants/theme';
 import { NAV_ITEMS } from '../constants/data';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -13,7 +13,22 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
   const currentDropdown = activeDropdown !== undefined ? activeDropdown : internalDropdown;
   const updateDropdown = setActiveDropdown || setInternalDropdown;
 
+  // estado para menú móvil
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // bloquear scroll del body mientras el menú móvil está abierto
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
+  // cerrar dropdown (usado por el nav)
   const closeDropdown = useCallback(() => updateDropdown(null), [updateDropdown]);
 
   const whatsAppNumber = '584246370388';
@@ -203,28 +218,50 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
 
       {/* Mobile menu (fullscreen, controlled by CSS classes) */}
       {mobileOpen && (
-        <div className="mobile-menu" style={{ borderTop: `1px solid ${C.navyBorder}` }}>
-          <div className="mobile-menu-inner" style={{ background: C.navyMid }}>
-            {NAV_ITEMS.map(item => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="mobile-menu-item"
-                onClick={() => setMobileOpen(false)}
-              >
-                {item.label}
+        <div
+          className="mobile-menu"
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 1100,
+          }}
+        >
+          <div
+            className="mobile-menu-inner"
+            style={{
+              background: C.navyMid,
+              height: '100%',
+              overflowY: 'auto',
+              WebkitOverflowScrolling: 'touch',
+            }}
+          >
+            {/* Close header row (logo + close X) */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 0', ...px }}>
+              <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
+                <img src="/web-craft-studio.png" alt="Web Craft Studio" style={{ height: '32px', width: 'auto', objectFit: 'contain' }} />
               </a>
-            ))}
-
-            <div className="mobile-menu-cta-wrap">
-              <a
-                href={whatsAppHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mobile-whatsapp-cta"
+              <button
                 onClick={() => setMobileOpen(false)}
-                aria-label="Get started on WhatsApp"
+                aria-label="Cerrar"
+                style={{ background: 'none', border: 'none', color: C.cyan, fontSize: 28, cursor: 'pointer' }}
               >
+                ✕
+              </button>
+            </div>
+
+            <nav style={{ paddingTop: 8, paddingBottom: 8 }}>
+              {NAV_ITEMS.map(item => (
+                <a key={item.label} href={item.href} className="mobile-menu-item" onClick={() => setMobileOpen(false)}>
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+
+            <div className="mobile-menu-cta-wrap" style={{ paddingTop: 16, paddingBottom: 36 }}>
+              <a href={whatsAppHref} target="_blank" rel="noopener noreferrer" className="mobile-whatsapp-cta" onClick={() => setMobileOpen(false)} aria-label="Get started on WhatsApp">
                 <FaWhatsapp aria-hidden="true" className="whatsapp-icon" />
                 <span className="cta-text">Get Started</span>
               </a>
