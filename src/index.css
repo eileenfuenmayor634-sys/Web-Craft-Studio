@@ -245,3 +245,7 @@ html, body {
  .social-icon { width: 36px; height: 36px; font-size: 14px; box-shadow: 0 6px 18px rgba(0,0,0,0.22); } 
   .social-sidebar { z-index: 1200; } 
 }
+
+html, body {
+ touch-action: pan-y pinch-zoom;
+}
