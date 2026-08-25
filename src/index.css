@@ -186,3 +186,61 @@ html, body {
   .mobile-whatsapp-cta { font-size: 15px !important; padding: 12px 18px !important; }
   .mobile-whatsapp-cta .whatsapp-icon { width: 18px !important; height: 18px !important; }
 }
+
+/* Floating social icons - bottom right, compact + coloridos */
+.social-sidebar {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  z-index: 999;
+  pointer-events: auto;
+}
+
+/* base de cada icono (burbuja) */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.28);
+  transition: transform .14s ease, box-shadow .14s ease, opacity .12s;
+  opacity: 0.98;
+}
+
+/* Instagram - degradado de marca */
+.social-ig {
+  background: radial-gradient(circle at 30% 20%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* Facebook - azul de marca */
+.social-fb {
+  background: linear-gradient(180deg, #1877F2, #165fcf);
+}
+
+/* Hover / focus */
+.social-icon:hover,
+.social-icon:focus {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.34);
+  outline: none;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .social-icon { width: 40px; height: 40px; font-size: 16px; }
+  .social-sidebar { right: 12px; bottom: 18px; gap: 8px; }
+}
+
+/* Opcional: ocultar en móviles muy pequeños para no tapar contenido */
+@media (max-width: 420px) {
+  .social-sidebar { display: none; }
+}
