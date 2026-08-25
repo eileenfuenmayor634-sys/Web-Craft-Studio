@@ -241,6 +241,7 @@ html, body {
 }
 
 /* Opcional: ocultar en móviles muy pequeños para no tapar contenido */
-@media (max-width: 420px) {
-  .social-sidebar { display: none; }
+@media (max-width: 420px) { .social-sidebar { right: 10px; bottom: 12px; gap: 8px; }
+ .social-icon { width: 36px; height: 36px; font-size: 14px; box-shadow: 0 6px 18px rgba(0,0,0,0.22); } 
+  .social-sidebar { z-index: 1200; } 
 }
