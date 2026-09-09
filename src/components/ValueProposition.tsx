@@ -16,15 +16,15 @@ export default function ValueProposition() {
           gap: '3rem', alignItems: 'center',
         }} className="value-grid">
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <SectionLabel text="03 - Why Us" light />
+            <SectionLabel text="03 - Por qué elegir a" light />
             <h2 style={{
               fontFamily: "Barlow Condensed, system-ui, sans-serif",
               fontSize: 'clamp(2.4rem, 6vw, 5rem)',
               fontWeight: 800, textTransform: 'uppercase', color: C.white,
               lineHeight: 1.0, margin: 0,
             }}>
-              Synonymous With<br />
-              <span style={{ color: C.cyan }}>Innovation.</span>
+              WEB CRAFT <br />
+              <span style={{ color: C.cyan }}>STUDIO.</span>
             </h2>
             <p style={{ color: '#888', fontSize: '15px', lineHeight: 1.75, maxWidth: '46ch', margin: 0 }}>
               We walk beside our clients from the very first step — blending deep technical expertise with strategic clarity to produce outcomes that outlast the engagement.

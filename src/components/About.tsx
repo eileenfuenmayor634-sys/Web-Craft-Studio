@@ -30,10 +30,10 @@ export default function About() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
             {[
-              ['11+', 'Years of experience delivering measurable digital impact'],
-              ['120+', 'Projects delivered across 3 continents'],
-              ['8', 'Core service disciplines under one roof'],
-              ['96%', 'Client retention rate across all engagements'],
+              ['5+', 'Años de experiencia generando un impacto digital medible.'],
+              ['60+', 'Proyectos entregados a través de 3 continentes'],
+              ['8', 'Disciplinas de servicio principales bajo un mismo techo'],
+              ['96%', 'Tasa de retención de clientes en todas las interacciones'],
             ].map(([n, l]) => (
               <div key={n} style={{
                 display: 'flex', alignItems: 'center', gap: '20px',
