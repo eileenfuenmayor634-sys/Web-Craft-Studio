@@ -2,6 +2,7 @@ import { useState, useCallback, Dispatch, SetStateAction, useEffect } from 'reac
 import { C, px } from '../constants/theme';
 import { NAV_ITEMS } from '../constants/data';
 import { FaWhatsapp } from 'react-icons/fa';
+import logo from '../assets/web-craft-studio.png';
 
 interface NavbarProps {
   activeDropdown?: string | null;
@@ -62,8 +63,8 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
         }}
       >
         {/* Logo */}
-        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
-          <img src="/web-craft-studio.png" alt="Web Craft Studio" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+       <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
+          <img src={logo} alt="Web Craft Studio" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
         </a>
 
         {/* Desktop nav */}

@@ -5,9 +5,9 @@ import { SectionLabel } from '../ui/SectionLabel';
 import { Arrow } from '../ui/Arrow';
 
 export default function ValueProposition() {
-  const stat1 = useCounter(120);
+  const stat1 = useCounter(60);
   const stat2 = useCounter(85);
-  const stat3 = useCounter(11);
+  const stat3 = useCounter(5);
 
   // Inject small responsive CSS for the big index number (so no extra CSS file edits required)
   useEffect(() => {
