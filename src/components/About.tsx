@@ -18,13 +18,13 @@ export default function About() {
               lineHeight: 1.05, margin: '0 0 1.5rem',
             }}>
               A Studio Built for<br />
-              <span style={{ color: C.muted }}>Digital Transformation</span>
+              <span style={{ color: C.muted }}>Transformación digital</span>
             </h2>
             <p style={{ fontSize: '15px', lineHeight: 1.8, color: C.body, maxWidth: '52ch', margin: '0 0 1.5rem' }}>
-              Founded in 2015 and headquartered across Maracaibo, Miami, and fully remote-capable, we've spent nearly a decade at the intersection of strategy, design, and engineering - helping organizations modernize how they compete in the digital economy.
+             Fundada en 2022 y con sede en Maracaibo y Miami además de operar bajo un modelo totalmente remoto, llevamos casi una década trabajando en la intersección de la estrategia, el diseño y la ingeniería, ayudando a las organizaciones a modernizar su forma de competir en la economía digital.
             </p>
             <p style={{ fontSize: '15px', lineHeight: 1.8, color: C.mid, maxWidth: '52ch', margin: 0 }}>
-              We don't just build websites. We architect digital systems that generate revenue, build authority, and scale with your ambitions.
+              No nos limitamos a crear sitios web. Diseñamos sistemas digitales que generan ingresos, consolidan su autoridad y crecen al ritmo de sus ambiciones.
             </p>
           </div>
 
