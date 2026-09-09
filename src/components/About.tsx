@@ -17,7 +17,7 @@ export default function About() {
               fontWeight: 700, textTransform: 'uppercase', color: C.black,
               lineHeight: 1.05, margin: '0 0 1.5rem',
             }}>
-              A Studio Built for<br />
+              Un estudio diseñado para<br />
               <span style={{ color: C.muted }}>Transformación digital</span>
             </h2>
             <p style={{ fontSize: '15px', lineHeight: 1.8, color: C.body, maxWidth: '52ch', margin: '0 0 1.5rem' }}>
