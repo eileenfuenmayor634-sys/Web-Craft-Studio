@@ -42,7 +42,7 @@ export default function Hero() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '25px' }}>
           <span style={{ display: 'block', width: '32px', height: '1px', background: C.cyan }} />
           <span style={{ color: C.cyan, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontFamily: 'monospace', opacity: 0.8 }}>
-            Digital Transformation Agency Est. 2015
+            Digital Transformation Agency Est. 2022
           </span>
         </div>
 
