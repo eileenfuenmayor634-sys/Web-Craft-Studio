@@ -144,9 +144,9 @@ export default function ValueProposition() {
               }}
             >
               {[
-                { num: stat1.count, label: 'Projects Completed', suffix: '+', index: '01' },
-                { num: stat2.count, label: 'Partner Clients', suffix: '+', index: '02' },
-                { num: stat3.count, label: 'Years in Business', suffix: '', index: '03' },
+                { num: stat1.count, label: 'Projects Completed', suffix: '60+', index: '' },
+                { num: stat2.count, label: 'Partner Clients', suffix: '80+', index: '' },
+                { num: stat3.count, label: 'Years in Business', suffix: '5', index: '' },
               ].map(({ num, label, suffix, index }, i) => (
                 <div
                   key={label}
