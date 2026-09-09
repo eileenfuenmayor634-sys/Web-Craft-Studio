@@ -2,7 +2,7 @@ import { useState, useCallback, Dispatch, SetStateAction, useEffect } from 'reac
 import { C, px } from '../constants/theme';
 import { NAV_ITEMS } from '../constants/data';
 import { FaWhatsapp } from 'react-icons/fa';
-import logo from '../assets/imports/logo.png';
+
 
 interface NavbarProps {
   activeDropdown?: string | null;
@@ -16,6 +16,9 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
 
   // estado para menú móvil
   const [mobileOpen, setMobileOpen] = useState(false);
+
+
+  const logoUrl = new URL('../assets/imports/web-craft-studio.png', import.meta.url).href;
 
   // bloquear scroll del body mientras el menú móvil está abierto
   useEffect(() => {
@@ -64,8 +67,8 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
       >
         {/* Logo */}
        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
-         <img 
-  src={`${import.meta.env.BASE_URL}web-craft-studio.png`} 
+        <img 
+  src={logoUrl} 
   alt="Web Craft Studio" 
   style={{ height: '40px', width: 'auto', objectFit: 'contain' }} 
 />
