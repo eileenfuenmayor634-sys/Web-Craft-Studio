@@ -2,7 +2,7 @@ import { useState, useCallback, Dispatch, SetStateAction, useEffect } from 'reac
 import { C, px } from '../constants/theme';
 import { NAV_ITEMS } from '../constants/data';
 import { FaWhatsapp } from 'react-icons/fa';
-import logo from '../assets/imports/web-craft-studio.png';
+import logo from '../assets/imports/logo.png';
 
 interface NavbarProps {
   activeDropdown?: string | null;
