@@ -64,7 +64,11 @@ export default function Navbar({ activeDropdown, setActiveDropdown }: NavbarProp
       >
         {/* Logo */}
        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
-          <img src={logo} alt="Web Craft Studio" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+         <img 
+  src={`${import.meta.env.BASE_URL}web-craft-studio.png`} 
+  alt="Web Craft Studio" 
+  style={{ height: '40px', width: 'auto', objectFit: 'contain' }} 
+/>
         </a>
 
         {/* Desktop nav */}
