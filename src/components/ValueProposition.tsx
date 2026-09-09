@@ -27,14 +27,15 @@ export default function ValueProposition() {
               <span style={{ color: C.cyan }}>STUDIO.</span>
             </h2>
             <p style={{ color: '#888', fontSize: '15px', lineHeight: 1.75, maxWidth: '46ch', margin: 0 }}>
-              We walk beside our clients from the very first step — blending deep technical expertise with strategic clarity to produce outcomes that outlast the engagement.
+              Nuestro compromiso es transformar organizaciones. Por eso, dedicamos cada hora de trabajo a 
+              perfeccionar nuestras soluciones y ofrecerte un servicio de excelencia respaldado por:
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', paddingTop: '8px' }}>
               {[
-                '11 years of battle-tested experience across industries',
-                'End-to-end service portfolio — strategy through execution',
-                'Senior-led teams with direct client access (no account managers)',
-                'Proprietary innovation frameworks for accelerated delivery',
+                '5 años de experiencia',
+                'Amplio Portafolio de Servicios',
+                'Personal Profesional y Atento',
+                'Soluciones innovadoras para tu marca',
               ].map(point => (
                 <div key={point} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                   <span style={{ color: '#555', marginTop: '2px', flexShrink: 0 }}>-</span>
