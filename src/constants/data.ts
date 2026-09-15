@@ -1,4 +1,6 @@
 import React from 'react';
+import { SERVICE_ICONS } from '../components/iconServices.tsx';
+
 
 export interface Service {
   icon: React.ReactNode;
@@ -10,7 +12,7 @@ export interface Service {
 export const NAV_ITEMS = [
   { label: 'About Us', href: '#about' },
   {
-    label: 'Services', 
+    label: 'Services',
     href: '#services',
     children: ['Web Design', 'Digital Marketing', 'Software Development', 'Branding', 'Cloud Services', 'Academy'],
   },
@@ -71,37 +73,37 @@ export const CLIENT_LOGOS = [
 
 export const SERVICES: Service[] = [
   {
-    icon: null, // O el nodo de React / ícono que uses
+    icon: SERVICE_ICONS.webDesign,
     title: 'Web Design & UI/UX',
     desc: 'Custom digital experiences designed to convert visitors into loyal brand advocates.',
     href: '#services',
   },
   {
-    icon: null,
+    icon: SERVICE_ICONS.software,
     title: 'Software Development',
     desc: 'Scalable web applications and backend systems engineered for high performance.',
     href: '#services',
   },
   {
-    icon: null,
+    icon: SERVICE_ICONS.marketing,
     title: 'Digital Marketing',
     desc: 'Data-driven campaigns that maximize customer acquisition and lifetime value.',
     href: '#services',
   },
   {
-    icon: null,
+    icon: SERVICE_ICONS.branding,
     title: 'Branding & Identity',
     desc: 'Distinctive visual identities that position your brand apart in competitive markets.',
     href: '#services',
   },
   {
-    icon: null,
+    icon: SERVICE_ICONS.cloud,
     title: 'Cloud Services',
     desc: 'Robust infrastructure and cloud migration strategies ensuring 99.9% uptime.',
     href: '#services',
   },
   {
-    icon: null,
+    icon: SERVICE_ICONS.academy,
     title: 'Academy & Training',
     desc: 'Corporate upskilling programs in modern web technologies and digital workflows.',
     href: '#services',

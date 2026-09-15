@@ -65,7 +65,7 @@ export default function Services() {
               fontWeight: 700, textTransform: 'uppercase', color: C.black,
               lineHeight: 1.0, margin: 0,
             }}>
-              Our Services
+              Nuestros servicios
             </h2>
             <p style={{ fontSize: '14px', color: C.mid, maxWidth: '38ch', lineHeight: 1.6, margin: 0 }}>
               Eight integrated disciplines. One accountable team. Every engagement is tailored — no off-the-shelf packages.

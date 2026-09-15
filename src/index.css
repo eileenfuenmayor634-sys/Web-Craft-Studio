@@ -250,3 +250,62 @@ html, body {
  touch-action: pan-y pinch-zoom;
 }
 
+/* Sección servicios: hace que todo quepa en la pantalla */
+section#services {
+  /* espacio superior e inferior responsivo */
+  padding: clamp(20px, 4vh, 48px) 1rem;
+  box-sizing: border-box;
+  /* opcional: si quieres forzar que la sección no supere la pantalla
+     y que todo se muestre sin scroll dentro de la sección */
+  /* max-height: calc(100vh - var(--header-height, 80px)); */
+}
+
+/* Grid responsiva para las tarjetas */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* ajusta minmax para más/menos columnas */
+  gap: clamp(12px, 2vw, 32px);
+  align-items: start;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Tarjeta */
+.service-card {
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  box-sizing: border-box;
+}
+
+/* Icono: tamaño responsivo con clamp para que se reduzca en pantallas pequeñas */
+.service-icon {
+  font-size: clamp(28px, 4.5vw, 48px); /* cambia límites si quieres iconos más grandes/pequeños */
+  width: 1em;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  color: var(--accent, #5b2be6); /* o currentColor si tu envoltorio maneja el color */
+}
+
+/* Titulos y textos más compactos para que entren dos filas */
+.service-card h3 {
+  font-size: clamp(14px, 1.6vw, 18px);
+  margin: 0.35rem 0 0.5rem;
+  line-height: 1.1;
+}
+
+/* Opcional: reduce la descripción para pantallas pequeñas */
+.service-card p {
+  font-size: clamp(12px, 1.2vw, 14px);
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Media queries extra si hace falta ajustar */
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); }
+  .service-icon { font-size: clamp(24px, 5.5vw, 40px); }
+  .service-card h3 { font-size: 15px; }
+}
