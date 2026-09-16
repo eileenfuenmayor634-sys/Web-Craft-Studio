@@ -1,11 +1,10 @@
 import React from 'react';
-import { SERVICE_ICONS } from '../components/iconServices.tsx';
+import { SERVICE_ICONS } from '../components/iconServices';
 
 
 export interface Service {
   icon: React.ReactNode;
   title: string;
-  desc: string;
   href: string;
 }
 
@@ -75,37 +74,31 @@ export const SERVICES: Service[] = [
   {
     icon: SERVICE_ICONS.webDesign,
     title: 'Web Design & UI/UX',
-    desc: 'Custom digital experiences designed to convert visitors into loyal brand advocates.',
     href: '#services',
   },
   {
     icon: SERVICE_ICONS.software,
     title: 'Software Development',
-    desc: 'Scalable web applications and backend systems engineered for high performance.',
     href: '#services',
   },
   {
     icon: SERVICE_ICONS.marketing,
     title: 'Digital Marketing',
-    desc: 'Data-driven campaigns that maximize customer acquisition and lifetime value.',
     href: '#services',
   },
   {
     icon: SERVICE_ICONS.branding,
     title: 'Branding & Identity',
-    desc: 'Distinctive visual identities that position your brand apart in competitive markets.',
     href: '#services',
   },
   {
     icon: SERVICE_ICONS.cloud,
     title: 'Cloud Services',
-    desc: 'Robust infrastructure and cloud migration strategies ensuring 99.9% uptime.',
     href: '#services',
   },
   {
     icon: SERVICE_ICONS.academy,
     title: 'Academy & Training',
-    desc: 'Corporate upskilling programs in modern web technologies and digital workflows.',
     href: '#services',
   },
 ];

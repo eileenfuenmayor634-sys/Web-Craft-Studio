@@ -10,7 +10,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
     <div
       style={{
         background: hovered ? C.light : C.surface,
-        padding: '2rem 1.75rem', display: 'flex', flexDirection: 'column', gap: '1rem',
+        padding: '1rem 0.9rem', display: 'flex', flexDirection: 'column', gap: '1rem',
         cursor: 'pointer', transition: 'background 0.2s', position: 'relative',
       }}
       onMouseEnter={() => setHovered(true)}
@@ -33,7 +33,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           {service.title}
         </h3>
         <p style={{ fontSize: '13px', lineHeight: 1.65, color: C.mid, margin: 0 }}>
-          {service.desc}
+          
         </p>
       </div>
       <a href={service.href} style={{
@@ -68,7 +68,7 @@ export default function Services() {
               Nuestros servicios
             </h2>
             <p style={{ fontSize: '14px', color: C.mid, maxWidth: '38ch', lineHeight: 1.6, margin: 0 }}>
-              Eight integrated disciplines. One accountable team. Every engagement is tailored — no off-the-shelf packages.
+              Estamos desde el primer paso para transcender y elevar tu marca.
             </p>
           </div>
         </div>
