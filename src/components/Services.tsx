@@ -57,7 +57,7 @@ export default function Services() {
           marginBottom: '3rem', paddingBottom: '2rem',
           borderBottom: `1px solid ${C.border}`,
         }}>
-          <SectionLabel text="02 - Services" />
+          <SectionLabel text="" />
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1rem' }}>
             <h2 style={{
               fontFamily: "Barlow Condensed, system-ui, sans-serif",

@@ -9,7 +9,6 @@ import { C } from './constants/theme';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SocialSidebar from './components/SocialSidebar';
-import About from './components/About';
 import Services from './components/Services';
 import ValueProposition from './components/ValueProposition';
 import PartnersBanner from './components/PartnersBanner';
@@ -38,7 +37,6 @@ export default function App() {
       <Navbar activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} />
       <Hero />
       <SocialSidebar />
-      <About />
       <Services />
       <ValueProposition />
       <PartnersBanner />
